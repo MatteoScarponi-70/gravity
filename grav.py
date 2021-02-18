@@ -7,7 +7,7 @@
 
 from shapely.geometry import Polygon
 
-class DensePoly(Polygon):
+class DensePolygon(Polygon):
 
 	def __init__(self, shell, density, holes=None):
 		super().__init__(shell,holes)
@@ -28,6 +28,10 @@ class DensePoly(Polygon):
 		self._density=value
 	pass
 
+
+
+	
+
 # Example 
 
 def main():
@@ -39,7 +43,7 @@ def main():
 	x=np.cos(angles)
 	y=np.sin(angles)
 
-	poly=DensePoly(
+	poly=DensePolygon(
 		shell=list(zip(x,y)),
 		density=200)
 
