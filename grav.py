@@ -27,19 +27,17 @@ class DensePolygon(Polygon):
 
 	@property
 	def density(self):
-		# print('Get density...')
 		return self._density
 	
 	@density.setter
 	def density(self,value):
-		print('Set density...')
 		if value<0:
 			raise ValueError('Minimum density allowed: 0 kg/m3')
 		self._density=value
 
 	def Grav(self,xstations,zstations):
 
-		G=6.67259e-11 # Gravitational Constant in m3/kg/s2
+		G=6.67259e-11 # Gravitational Constant m3/kg/s2
 
 		xPolygon,zPolygon=self.exterior.xy
 		xPolygon=np.array(xPolygon)
@@ -112,11 +110,11 @@ class DensePolygon(Polygon):
 
 		return xAnomaly,zAnomaly
 
-# Example 
-
 def main():
 	import numpy as np
 	import matplotlib.pyplot as plt
+
+	# Exemple #
 
 	R=1		# km
 	dz=5	# km
