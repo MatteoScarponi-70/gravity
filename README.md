@@ -1,2 +1,2 @@
 # gravity
-Implement forward gravity computation routines.
+2D forward gravity modelling
